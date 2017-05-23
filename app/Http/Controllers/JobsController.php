@@ -16,12 +16,12 @@ class JobsController extends Controller
 		if($category->exists)
 		{
 			
-			$jobs = $category->with(['category'])->jobs()->paginate(10);
+			$jobs = $category->jobs()->paginate(10);
 
 
 		} else {
 
-			$jobs = Job::paginate(10);
+			$jobs = Job::with('category')->paginate(10);
 
 		}
 
