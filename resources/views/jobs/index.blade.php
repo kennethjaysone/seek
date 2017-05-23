@@ -13,7 +13,7 @@
 
                     <div class="article">
 
-                        <h4><a href="{{ route('jobs.show', [$job->category, $job->id]) }}">{{ $job->title }}</a></h4>
+                        <h4><a href="{{ route('jobs.show', [$job, $job->id]) }}">{{ $job->title }}</a></h4>
 
                         <div class="body">
                             
